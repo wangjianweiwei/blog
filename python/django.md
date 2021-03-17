@@ -58,3 +58,19 @@ class JsonField(TextField):
         """
         return json.loads(value)
 ```
+
+## 文件下载时使用中文名称会乱码
+
+```python
+from django.view import View
+from django.utils.encoding import escape_uri_path
+from django.http.response import FileResponse
+
+
+class TestView(View):
+
+    def post(self, request):
+        path = ""
+        name = "诺贝尔获奖名单.xlsx"
+        return FileResponse(open(path, "rb"), as_attachment=True, filename=escape_uri_path(name))
+```
