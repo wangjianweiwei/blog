@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+@Author: 王剑威
+@Time: 2022/9/7 10:45
+"""
+import base64
+
+payload = """gASVWwEAAAAAAAB9lCiMBm1ldGhvZJSMBGVtaXSUjAVldmVudJSMBW9wQWNrlIwEZGF0YZR9lCiMA2RvY5SMIGU1NDdhOWRkMTE5ODQ1YjZiZGQxYjdkZmFk
+N2U0ZjA1lIwBdpRNyBOMBWN0aW1llEdB2MVznxDB3YwCb3CUXZQofZSMBnJldGFpbpRNoxhzfZQojAphdHRyaWJ1dGVzlH2UjAZhdXRob3KUTc/ec4wGaW5z
+ZXJ0lIwD5L2glHVljANzZXGUTXsLjANzcmOUjBR4cTBfSTlQSF9pSVZoaEU2QUJnRpSMBHVzZXKUTc/edYwJbmFtZXNwYWNllIwBL5SMBHJvb22UjBRydU1t
+T09ramEtNjN0SmdSQW5lcpSMCHNraXBfc2lklE6MCGNhbGxiYWNrlE6MB2hvc3RfaWSUjCAyNjMxOTk2ZWY2NzA0ZDFhODhiMTA5OTk0ZjRiOTE1N5R1Lg=="""
+import pickle
+
+print(pickle.loads(base64.b64decode(payload)))
